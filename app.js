@@ -166,6 +166,7 @@ const cartItems = document.querySelector("#cartItems");
 const cartCount = document.querySelector("#cartCount");
 const subtotal = document.querySelector("#subtotal");
 const total = document.querySelector("#total");
+const bonusStatus = document.querySelector("#bonusStatus");
 const checkoutButton = document.querySelector("#checkoutButton");
 const toast = document.querySelector("#toast");
 const filters = document.querySelector("#filters");
@@ -187,6 +188,46 @@ function showToast(message) {
   toast.textContent = message;
   toast.classList.add("show");
   window.setTimeout(() => toast.classList.remove("show"), 2200);
+}
+
+function getBonusDetails(amount) {
+  if (amount >= 100) {
+    return {
+      unlocked: true,
+      label: "Seoul Bonus Bag unlocked",
+      value: "5–6 free extras"
+    };
+  }
+
+  if (amount >= 75) {
+    return {
+      unlocked: true,
+      label: "Upgraded sample kit unlocked",
+      value: "3 masks + 1 mini"
+    };
+  }
+
+  if (amount >= 49) {
+    return {
+      unlocked: true,
+      label: "Seoul Sample Kit unlocked",
+      value: "3 free masks/minis"
+    };
+  }
+
+  return {
+    unlocked: false,
+    label: "Bonus unlock",
+    value: `${money(Math.max(49 - amount, 0))} away from 3 free masks`
+  };
+}
+
+function renderBonusStatus(amount) {
+  if (!bonusStatus) return;
+
+  const bonus = getBonusDetails(amount);
+  bonusStatus.className = `bonus-status${bonus.unlocked ? " unlocked" : ""}`;
+  bonusStatus.innerHTML = `<span>${bonus.label}</span><strong>${bonus.value}</strong>`;
 }
 
 function renderProductMedia(product) {
@@ -247,7 +288,12 @@ function addToCart(productId) {
   saveCart();
   renderCart();
   const product = products.find(item => item.id === productId);
-  showToast(`${product.name} added to your Korea drop`);
+  const amount = Object.entries(state.cart).reduce((sum, [id, qty]) => {
+    const item = products.find(productItem => productItem.id === id);
+    return sum + (item ? item.price * qty : 0);
+  }, 0);
+  const bonus = getBonusDetails(amount);
+  showToast(bonus.unlocked ? `${product.name} added — ${bonus.value} unlocked` : `${product.name} added to your Korea drop`);
 }
 
 function updateQty(productId, direction) {
@@ -275,9 +321,10 @@ function renderCart() {
   cartCount.textContent = count;
   subtotal.textContent = money(amount);
   total.textContent = money(amount);
+  renderBonusStatus(amount);
 
   if (entries.length === 0) {
-    cartItems.innerHTML = `<div class="empty-cart">Your Korea drop is empty. Add a bundle or a few skincare picks.</div>`;
+    cartItems.innerHTML = `<div class="empty-cart">Your Korea drop is empty. Add a $49+ bundle to unlock the free 3-piece Seoul Sample Kit.</div>`;
     return;
   }
 
