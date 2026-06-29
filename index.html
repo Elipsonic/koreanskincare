@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SeoulShelf — Korean skincare, direct from Korea</title>
-  <meta name="description" content="A modern K-beauty storefront for direct-from-Korea skincare with free U.S. shipping and transparent tracking." />
+  <title>SeoulShelf — hard-to-find Korean skincare direct from Korea</title>
+  <meta name="description" content="Shop trending Korean skincare, Korean-market formulas, and hard-to-find Seoul beauty products shipped direct from Korea to the U.S. with free shipping and transparent tracking." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://images.unsplash.com">
 </head>
 <body>
   <div class="announcement">
-    <span>Direct-from-Korea pricing</span>
+    <span>Hard-to-find Korean-market picks</span>
     <strong>Free U.S. shipping</strong>
     <span>Typical delivery: 10–18 days</span>
   </div>
@@ -25,8 +25,9 @@
     </a>
 
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#shop">Shop</a>
-      <a href="#how-it-works">How it works</a>
+      <a href="/shop/">Shop page</a>
+      <a href="#shop">Home drop</a>
+      <a href="#why-korea-direct">Why Korea direct</a>
       <a href="#tracking">Tracking</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -40,20 +41,21 @@
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Korean skincare without the U.S. markup</p>
-        <h1>Fresh K-beauty, picked up in Korea and shipped to your door.</h1>
+        <p class="eyebrow">Korean skincare Americans usually can’t find on local shelves</p>
+        <h1>Fresh Seoul skincare, picked up in Korea and shipped to your door.</h1>
         <p class="hero-text">
-          SeoulShelf is the slow-but-smart way to buy Korean skincare. We source from Korea,
-          bundle orders, keep shipping free for customers, and update you at every step.
+          SeoulShelf is the slow-but-smart way to buy Korean skincare. We focus on viral Seoul products,
+          Korean-market formulas, and hard-to-find drops that may sell out, arrive late, or look different in U.S. retail.
+          You wait a little longer, but get Korea-direct pricing, free U.S. shipping, and updates from pickup to doorstep.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#shop">Shop the drop</a>
+          <a class="button primary" href="/shop/">Shop Seoul Picks</a>
           <a class="button ghost" href="#how-it-works">See the flow</a>
         </div>
         <div class="hero-stats" aria-label="Store highlights">
           <div><strong>10–18</strong><span>day delivery</span></div>
           <div><strong>Up to 45%</strong><span>less than U.S. retail</span></div>
-          <div><strong>$0</strong><span>consumer shipping</span></div>
+          <div><strong>Harder</strong><span>to find in America</span></div>
         </div>
       </div>
 
@@ -77,37 +79,43 @@
     <section class="trust-row" aria-label="Store promises">
       <article>
         <span>01</span>
-        <strong>Korea-first sourcing</strong>
-        <p>Products are bought through Korean supplier channels and shipped in consolidated batches.</p>
+        <strong>Korean-market access</strong>
+        <p>We highlight Seoul picks, Korean retail favorites, and products that may be unavailable, reformulated, or harder to find in American stores.</p>
       </article>
       <article>
         <span>02</span>
         <strong>Transparent wait</strong>
-        <p>Customers know it takes longer, but they get lower prices and status updates.</p>
+        <p>Customers know it takes longer, but they get lower prices, clear delivery windows, and status updates before carrier tracking starts.</p>
       </article>
       <article>
         <span>03</span>
         <strong>Free U.S. shipping</strong>
-        <p>Shipping cost is built into the business model, so the cart feels simple.</p>
+        <p>Shipping cost is built into the business model, so the cart feels simple and the savings stay obvious.</p>
       </article>
     </section>
 
     <section class="section intro" id="shop">
       <div>
         <p class="eyebrow">Current Korea drop</p>
-        <h2>Shop by skin goal</h2>
+        <h2>Shop researched Seoul picks</h2>
+        <p class="section-subtitle">
+          Example products are based on current U.S. K-beauty demand: Biodance masks, Medicube toner pads and glass-skin creams,
+          Anua PDRN, Aestura barrier care, I’m From rice toner, VT Reedle Shot, Ma:nyo cleansing oil, and Korean-market SPF favorites.
+        </p>
       </div>
       <div class="shop-tools">
         <label class="search-label">
           <span class="sr-only">Search products</span>
-          <input id="searchInput" type="search" placeholder="Search sunscreen, serum, toner..." />
+          <input id="searchInput" type="search" placeholder="Search PDRN, toner pads, sunscreen, barrier cream..." />
         </label>
         <div class="filters" id="filters" aria-label="Product filters">
           <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="hydration">Hydration</button>
+          <button class="filter" data-filter="viral">Viral</button>
+          <button class="filter" data-filter="pdrn">PDRN</button>
+          <button class="filter" data-filter="toner">Toners & pads</button>
           <button class="filter" data-filter="barrier">Barrier</button>
-          <button class="filter" data-filter="brightening">Brightening</button>
-          <button class="filter" data-filter="spf">SPF</button>
+          <button class="filter" data-filter="spf">Korean-market SPF</button>
+          <button class="filter" data-filter="cleanse">Cleanse</button>
         </div>
       </div>
       <div class="product-grid" id="productGrid" aria-live="polite"></div>
@@ -121,7 +129,7 @@
           Customers save because you are not stocking a huge U.S. warehouse. Instead, orders are
           collected, purchased from Korea, packed together, and shipped across the Pacific.
         </p>
-        <a class="button primary" href="#shop">Start an order</a>
+        <a class="button primary" href="/shop/">Start an order</a>
       </div>
 
       <div class="steps">
@@ -156,6 +164,21 @@
       </div>
     </section>
 
+    <section class="section edit-note" id="why-korea-direct">
+      <div class="note-card">
+        <p class="eyebrow">Why Korea direct</p>
+        <h2>Some products Americans want never show up the same way in U.S. retail.</h2>
+        <p>
+          Korean beauty moves fast: glass-skin masks, PDRN serums, toner pads, barrier creams, and SPF-style products
+          can go viral before U.S. shelves catch up. Sunscreen is especially tricky because U.S. rules can require different
+          formulations, so the store should always verify import, labeling, and compliance before selling regulated products.
+        </p>
+      </div>
+      <div class="quote-card">
+        “A direct-from-Korea beauty aisle for products shoppers are already searching for — slower, cheaper, and clearer.”
+      </div>
+    </section>
+
     <section class="section tracking" id="tracking">
       <div>
         <p class="eyebrow">Live-feeling order experience</p>
@@ -179,20 +202,6 @@
       </div>
     </section>
 
-    <section class="section edit-note">
-      <div class="note-card">
-        <p class="eyebrow">Brand direction</p>
-        <h2>Modern, soft, clean, and trustworthy.</h2>
-        <p>
-          The visual style uses glassy cards, pale gradients, rounded product tiles, and warm editorial copy
-          so the store feels premium while still emphasizing low prices.
-        </p>
-      </div>
-      <div class="quote-card">
-        “A direct-from-Korea beauty aisle with DoorDash-style status updates — slower, cheaper, clearer.”
-      </div>
-    </section>
-
     <section class="section faq" id="faq">
       <p class="eyebrow">Questions customers will ask</p>
       <h2>FAQ</h2>
@@ -207,6 +216,10 @@
       <details>
         <summary>Is shipping really free?</summary>
         <p>Yes for the customer. Shipping is included in the store’s pricing and fulfillment model.</p>
+      </details>
+      <details>
+        <summary>Can I get products that are not normally in America?</summary>
+        <p>That is the point: SeoulShelf focuses on Korea-market picks, viral Seoul products, and items that are harder to find locally. Regulated products, especially sunscreen, must be checked before sale.</p>
       </details>
       <details>
         <summary>Can I track my order?</summary>
@@ -245,7 +258,7 @@
         <div class="total"><span>Total</span><strong id="total">$0</strong></div>
       </div>
       <button class="button primary full" id="checkoutButton">Checkout preview</button>
-      <p class="cart-footnote">Prototype only. Connect Stripe, taxes, inventory, and fulfillment before launch.</p>
+      <p class="cart-footnote">Prototype only. Connect Stripe, taxes, inventory, supplier verification, and compliance checks before launch.</p>
     </div>
   </aside>
 
