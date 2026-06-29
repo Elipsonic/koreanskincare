@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SeoulShelf — Korean skincare, direct from Korea</title>
+  <meta name="description" content="A modern K-beauty storefront for direct-from-Korea skincare with free U.S. shipping and transparent tracking." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+  <div class="announcement">
+    <span>Direct-from-Korea pricing</span>
+    <strong>Free U.S. shipping</strong>
+    <span>Typical delivery: 10–18 days</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="SeoulShelf home">
+      <span class="brand-mark">SS</span>
+      <span>
+        <strong>SeoulShelf</strong>
+        <small>K-beauty direct</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#shop">Shop</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#tracking">Tracking</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton" aria-label="Open cart">
+      <span>Cart</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Korean skincare without the U.S. markup</p>
+        <h1>Fresh K-beauty, picked up in Korea and shipped to your door.</h1>
+        <p class="hero-text">
+          SeoulShelf is the slow-but-smart way to buy Korean skincare. We source from Korea,
+          bundle orders, keep shipping free for customers, and update you at every step.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#shop">Shop the drop</a>
+          <a class="button ghost" href="#how-it-works">See the flow</a>
+        </div>
+        <div class="hero-stats" aria-label="Store highlights">
+          <div><strong>10–18</strong><span>day delivery</span></div>
+          <div><strong>Up to 45%</strong><span>less than U.S. retail</span></div>
+          <div><strong>$0</strong><span>consumer shipping</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Featured order tracking preview">
+        <div class="floating-badge">Picked up in Seoul</div>
+        <div class="product-stack">
+          <div class="stack-card cleanser"></div>
+          <div class="stack-card serum"></div>
+          <div class="stack-card cream"></div>
+        </div>
+        <div class="mini-tracker">
+          <span class="pulse"></span>
+          <div>
+            <strong>Your Glow Bundle is moving</strong>
+            <p>Supplier pickup complete • Seoul fulfillment hub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-row" aria-label="Store promises">
+      <article>
+        <span>01</span>
+        <strong>Korea-first sourcing</strong>
+        <p>Products are bought through Korean supplier channels and shipped in consolidated batches.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <strong>Transparent wait</strong>
+        <p>Customers know it takes longer, but they get lower prices and status updates.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <strong>Free U.S. shipping</strong>
+        <p>Shipping cost is built into the business model, so the cart feels simple.</p>
+      </article>
+    </section>
+
+    <section class="section intro" id="shop">
+      <div>
+        <p class="eyebrow">Current Korea drop</p>
+        <h2>Shop by skin goal</h2>
+      </div>
+      <div class="shop-tools">
+        <label class="search-label">
+          <span class="sr-only">Search products</span>
+          <input id="searchInput" type="search" placeholder="Search sunscreen, serum, toner..." />
+        </label>
+        <div class="filters" id="filters" aria-label="Product filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="hydration">Hydration</button>
+          <button class="filter" data-filter="barrier">Barrier</button>
+          <button class="filter" data-filter="brightening">Brightening</button>
+          <button class="filter" data-filter="spf">SPF</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="split-section" id="how-it-works">
+      <div class="split-copy">
+        <p class="eyebrow">Like delivery tracking, but for Korea-to-U.S. skincare</p>
+        <h2>The wait is the whole deal.</h2>
+        <p>
+          Customers save because you are not stocking a huge U.S. warehouse. Instead, orders are
+          collected, purchased from Korea, packed together, and shipped across the Pacific.
+        </p>
+        <a class="button primary" href="#shop">Start an order</a>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <div>
+            <strong>Order placed</strong>
+            <p>Customer checks out with free U.S. shipping and a clear delivery window.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <div>
+            <strong>Pickup in Korea</strong>
+            <p>Products are sourced and picked up from Korean suppliers.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <div>
+            <strong>Seoul fulfillment</strong>
+            <p>Items are bundled, packed, scanned, and prepared for international shipment.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span>4</span>
+          <div>
+            <strong>U.S. delivery</strong>
+            <p>Customers receive the final carrier tracking once the package lands stateside.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tracking" id="tracking">
+      <div>
+        <p class="eyebrow">Live-feeling order experience</p>
+        <h2>Give customers updates before the carrier tracking exists.</h2>
+        <p class="section-subtitle">
+          This prototype includes a branded tracking timeline you can later connect to your order management system.
+        </p>
+      </div>
+
+      <div class="tracking-card">
+        <div class="tracking-head">
+          <div>
+            <span class="status-pill">In progress</span>
+            <h3>Order SS-2408-391</h3>
+            <p>Estimated delivery: 12–16 days</p>
+          </div>
+          <button class="button ghost small" id="advanceTracking">Preview next status</button>
+        </div>
+
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section class="section edit-note">
+      <div class="note-card">
+        <p class="eyebrow">Brand direction</p>
+        <h2>Modern, soft, clean, and trustworthy.</h2>
+        <p>
+          The visual style uses glassy cards, pale gradients, rounded product tiles, and warm editorial copy
+          so the store feels premium while still emphasizing low prices.
+        </p>
+      </div>
+      <div class="quote-card">
+        “A direct-from-Korea beauty aisle with DoorDash-style status updates — slower, cheaper, clearer.”
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <p class="eyebrow">Questions customers will ask</p>
+      <h2>FAQ</h2>
+      <details open>
+        <summary>Why is it cheaper?</summary>
+        <p>SeoulShelf is built around direct Korea sourcing, consolidated ordering, and lower inventory overhead.</p>
+      </details>
+      <details>
+        <summary>Why does delivery take longer?</summary>
+        <p>Orders are picked up in Korea, packed together, exported, and then handed to a U.S. carrier.</p>
+      </details>
+      <details>
+        <summary>Is shipping really free?</summary>
+        <p>Yes for the customer. Shipping is included in the store’s pricing and fulfillment model.</p>
+      </details>
+      <details>
+        <summary>Can I track my order?</summary>
+        <p>Yes. You receive branded updates first, then carrier tracking once your package reaches the U.S. leg.</p>
+      </details>
+    </section>
+
+    <section class="newsletter">
+      <div>
+        <p class="eyebrow">Get first access</p>
+        <h2>Join the next Korea drop</h2>
+      </div>
+      <form id="newsletterForm">
+        <label class="sr-only" for="emailInput">Email address</label>
+        <input id="emailInput" type="email" placeholder="you@example.com" required />
+        <button class="button primary" type="submit">Notify me</button>
+      </form>
+      <p id="newsletterMessage" class="form-message" role="status"></p>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping cart">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Your bundle</p>
+          <h2>Cart</h2>
+        </div>
+        <button class="icon-button" id="closeCart" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary">
+        <div><span>Products</span><strong id="subtotal">$0</strong></div>
+        <div><span>U.S. shipping</span><strong>Free</strong></div>
+        <div><span>Estimated delivery</span><strong>10–18 days</strong></div>
+        <div class="total"><span>Total</span><strong id="total">$0</strong></div>
+      </div>
+      <button class="button primary full" id="checkoutButton">Checkout preview</button>
+      <p class="cart-footnote">Prototype only. Connect Stripe, taxes, inventory, and fulfillment before launch.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">
+    <div class="brand">
+      <span class="brand-mark">SS</span>
+      <span>
+        <strong>SeoulShelf</strong>
+        <small>K-beauty direct</small>
+      </span>
+    </div>
+    <p>Built as a launch-ready storefront prototype. Replace sample products with real supplier data before selling.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
