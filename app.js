@@ -1,5 +1,38 @@
 const products = [
   {
+    id: "glass-skin-starter-drop",
+    name: "Glass Skin Starter Drop",
+    goal: "bundle",
+    label: "Drop",
+    description: "AOV-friendly starter bundle: toner pads, glow cream, mask night, and a gentle first cleanse.",
+    price: 49,
+    compare: 76,
+    bg: "linear-gradient(135deg, #ffe0ea, #ffffff)",
+    bottle: "linear-gradient(160deg, #ffc8df, #f58ab6)"
+  },
+  {
+    id: "barrier-rescue-drop",
+    name: "Barrier Rescue Drop",
+    goal: "bundle",
+    label: "Care",
+    description: "A calmer routine bundle for dry, sensitive, or over-exfoliated skin goals.",
+    price: 58,
+    compare: 88,
+    bg: "linear-gradient(135deg, #dff3ff, #ffffff)",
+    bottle: "linear-gradient(160deg, #cfefff, #8ab8ff)"
+  },
+  {
+    id: "mask-night-pack",
+    name: "Mask Night 10-Pack",
+    goal: "mask",
+    label: "10x",
+    description: "A compact sheet and hydrogel mask pack made for low-friction restocks and gifts.",
+    price: 29,
+    compare: 48,
+    bg: "linear-gradient(135deg, #fff1c9, #ffffff)",
+    bottle: "linear-gradient(160deg, #fff5cc, #d7be76)"
+  },
+  {
     id: "biodance-collagen-mask",
     name: "Biodance Bio-Collagen Real Deep Mask",
     goal: "viral",
@@ -38,9 +71,9 @@ const products = [
   {
     id: "anua-pdrn-serum",
     name: "Anua PDRN Hyaluronic Acid Capsule 100 Serum",
-    goal: "pdrn",
+    goal: "viral",
     label: "PDRN",
-    description: "Trending PDRN capsule serum for hydrated, firm-looking, dewy skin.",
+    description: "Trending capsule serum for hydrated, firm-looking, dewy skin without medical claims.",
     price: 28,
     compare: 48,
     image: "images/product-images/anua-pdrn-hyaluronic-acid-capsule-100-serum.svg",
@@ -52,24 +85,12 @@ const products = [
     name: "Anua Heartleaf 77 Soothing Toner",
     goal: "toner",
     label: "77",
-    description: "Light calming toner for redness-prone, oily, or sensitive routines.",
+    description: "Light calming toner for redness-prone, oily, or sensitive-feeling routines.",
     price: 20,
     compare: 34,
     image: "images/product-images/anua-heartleaf-77-soothing-toner.svg",
     bg: "linear-gradient(135deg, #dff3df, #ffffff)",
     bottle: "linear-gradient(160deg, #d3f2d3, #8ecba1)"
-  },
-  {
-    id: "vt-reedle-shot-100",
-    name: "VT Reedle Shot 100",
-    goal: "viral",
-    label: "VT",
-    description: "Spicule-style skin-refining treatment for a smoother, polished feel.",
-    price: 30,
-    compare: 52,
-    image: "images/product-images/vt-reedle-shot-100.svg",
-    bg: "linear-gradient(135deg, #e4ddff, #ffffff)",
-    bottle: "linear-gradient(160deg, #d8ceff, #8f7cff)"
   },
   {
     id: "im-from-rice-toner",
@@ -100,36 +121,12 @@ const products = [
     name: "Ma:nyo Pure Cleansing Oil",
     goal: "cleanse",
     label: "Oil",
-    description: "Beloved first cleanse for sunscreen, makeup, and daily buildup.",
+    description: "Beloved first cleanse for makeup, sunscreen residue, and daily buildup.",
     price: 23,
     compare: 39,
     image: "images/product-images/manyo-pure-cleansing-oil.svg",
     bg: "linear-gradient(135deg, #ffe7b8, #ffffff)",
     bottle: "linear-gradient(160deg, #ffe1a6, #ffb55e)"
-  },
-  {
-    id: "round-lab-birch-sun",
-    name: "Round Lab Birch Juice Moisturizing Sun Cream",
-    goal: "spf",
-    label: "SPF",
-    description: "Korean-market lightweight sunscreen texture shoppers often hunt for.",
-    price: 24,
-    compare: 42,
-    image: "images/product-images/round-lab-birch-juice-moisturizing-sun-cream.svg",
-    bg: "linear-gradient(135deg, #e0f5ff, #ffffff)",
-    bottle: "linear-gradient(160deg, #cfefff, #85ccff)"
-  },
-  {
-    id: "beauty-joseon-relief-sun",
-    name: "Beauty of Joseon Relief Sun: Rice + Probiotics",
-    goal: "spf",
-    label: "Sun",
-    description: "Cult daily SPF-style finish with rice, probiotics, and no heavy feel.",
-    price: 22,
-    compare: 38,
-    image: "images/product-images/beauty-of-joseon-relief-sun-rice-probiotics.svg",
-    bg: "linear-gradient(135deg, #fff1c9, #ffffff)",
-    bottle: "linear-gradient(160deg, #fff5cc, #d7be76)"
   },
   {
     id: "skin1004-centella-ampoule",
@@ -146,12 +143,12 @@ const products = [
 ];
 
 const trackingSteps = [
-  { title: "Order placed", body: "We received your order and reserved it for the next Korea pickup window.", time: "Day 0" },
-  { title: "Supplier pickup scheduled", body: "Your items are queued for collection from Korean supplier partners.", time: "Day 1–3" },
-  { title: "Picked up in Korea", body: "Products were collected and scanned into the SeoulShelf Korea flow.", time: "Day 3–5" },
-  { title: "Packed at Seoul hub", body: "Your bundle is being checked, packed, and prepared for export.", time: "Day 5–8" },
-  { title: "International shipment", body: "Package is moving from Korea to the United States.", time: "Day 8–13" },
-  { title: "U.S. carrier handoff", body: "Final-mile tracking activates after the package reaches a U.S. carrier.", time: "Day 13–18" }
+  { title: "Drop reserved", body: "We received your order and reserved it for the next Korea pickup window.", time: "Day 0" },
+  { title: "Korea sourcing", body: "Your items are queued with verified supplier channels in Korea.", time: "Day 1–3" },
+  { title: "Product check", body: "Items are matched against the launch-safe catalog before packing.", time: "Day 3–5" },
+  { title: "Consolidated export", body: "Your bundle is packed with other drop orders for the Korea-to-U.S. shipment.", time: "Day 5–10" },
+  { title: "Boston handoff", body: "The shipment has reached the U.S. fulfillment step and final-mile prep begins.", time: "Day 10–14" },
+  { title: "U.S. delivery", body: "Final carrier tracking activates for doorstep delivery.", time: "Day 14–18" }
 ];
 
 const state = {
@@ -194,7 +191,7 @@ function showToast(message) {
 
 function renderProductMedia(product) {
   if (product.image) {
-    return `<img src="${product.image}" alt="${product.name} mockup product image" loading="lazy" style="width:100%; height:100%; min-height:260px; object-fit:cover; display:block;">`;
+    return `<img src="${product.image}" alt="${product.name} mockup product image" loading="lazy" class="product-image">`;
   }
 
   return `<div class="product-bottle" data-label="${product.label}"></div>`;
@@ -218,7 +215,7 @@ function renderProducts() {
 
     return `
       <article class="product-card">
-        <div class="product-media" style="--product-bg: ${product.bg}; --product-bottle: ${product.bottle}; padding: 0; overflow: hidden;">
+        <div class="product-media" style="--product-bg: ${product.bg}; --product-bottle: ${product.bottle};">
           ${renderProductMedia(product)}
         </div>
         <div class="product-info">
@@ -230,14 +227,14 @@ function renderProducts() {
             <span class="compare">${money(product.compare)}</span>
             <span class="save">Save ${savings}%</span>
           </div>
-          <button class="button primary full" data-add="${product.id}">Add to bundle</button>
+          <button class="button primary full" data-add="${product.id}">Add to drop</button>
         </div>
       </article>
     `;
   }).join("");
 
   if (visible.length === 0) {
-    productGrid.innerHTML = `<p class="empty-cart">No products found. Try a different skin goal or search term.</p>`;
+    productGrid.innerHTML = `<p class="empty-cart">No products found. Try a different routine, skin goal, or search term.</p>`;
   }
 
   document.querySelectorAll("[data-add]").forEach(button => {
@@ -250,7 +247,7 @@ function addToCart(productId) {
   saveCart();
   renderCart();
   const product = products.find(item => item.id === productId);
-  showToast(`${product.name} added to your bundle`);
+  showToast(`${product.name} added to your Korea drop`);
 }
 
 function updateQty(productId, direction) {
@@ -280,7 +277,7 @@ function renderCart() {
   total.textContent = money(amount);
 
   if (entries.length === 0) {
-    cartItems.innerHTML = `<div class="empty-cart">Your bundle is empty. Add a few Korean skincare favorites.</div>`;
+    cartItems.innerHTML = `<div class="empty-cart">Your Korea drop is empty. Add a bundle or a few skincare picks.</div>`;
     return;
   }
 
@@ -288,9 +285,13 @@ function renderCart() {
     const product = products.find(item => item.id === productId);
     if (!product) return "";
 
+    const thumbStyle = product.image
+      ? `background-image: url('${product.image}'); background-size: cover; background-position: center;`
+      : `background: ${product.bg};`;
+
     return `
       <div class="cart-item">
-        <div class="cart-thumb" style="--product-bg: ${product.bg}; background-image: url('${product.image}'); background-size: cover; background-position: center;"></div>
+        <div class="cart-thumb" style="${thumbStyle}"></div>
         <div>
           <strong>${product.name}</strong>
           <small>${money(product.price)} • free U.S. shipping</small>
@@ -326,10 +327,9 @@ function closeCartDrawer() {
 function renderTimeline() {
   timeline.innerHTML = trackingSteps.map((step, index) => {
     const statusClass = index < state.trackingIndex ? "done" : index === state.trackingIndex ? "current" : "";
-
     return `
       <li class="${statusClass}">
-        <span class="timeline-dot" aria-hidden="true"></span>
+        <span class="timeline-dot"></span>
         <div>
           <strong>${step.title}</strong>
           <p>${step.body}</p>
@@ -340,47 +340,38 @@ function renderTimeline() {
   }).join("");
 }
 
-filters.addEventListener("click", event => {
-  const button = event.target.closest("[data-filter]");
+filters?.addEventListener("click", event => {
+  const button = event.target.closest(".filter");
   if (!button) return;
 
   state.filter = button.dataset.filter;
-  document.querySelectorAll(".filter").forEach(item => item.classList.remove("active"));
-  button.classList.add("active");
+  document.querySelectorAll(".filter").forEach(item => item.classList.toggle("active", item === button));
   renderProducts();
 });
 
-searchInput.addEventListener("input", event => {
+searchInput?.addEventListener("input", event => {
   state.search = event.target.value;
   renderProducts();
 });
 
-cartButton.addEventListener("click", openCart);
-closeCart.addEventListener("click", closeCartDrawer);
-
-cartDrawer.addEventListener("click", event => {
+cartButton?.addEventListener("click", openCart);
+closeCart?.addEventListener("click", closeCartDrawer);
+cartDrawer?.addEventListener("click", event => {
   if (event.target === cartDrawer) closeCartDrawer();
 });
 
-checkoutButton.addEventListener("click", () => {
-  const entries = Object.entries(state.cart);
-  if (!entries.length) {
-    showToast("Add products before checkout.");
-    return;
-  }
-
-  showToast("Checkout preview: connect Stripe or Shopify to launch.");
+checkoutButton?.addEventListener("click", () => {
+  showToast("Checkout is a prototype. Connect payments and compliance before launch.");
 });
 
-advanceTracking.addEventListener("click", () => {
+advanceTracking?.addEventListener("click", () => {
   state.trackingIndex = (state.trackingIndex + 1) % trackingSteps.length;
   renderTimeline();
 });
 
-newsletterForm.addEventListener("submit", event => {
+newsletterForm?.addEventListener("submit", event => {
   event.preventDefault();
-  const email = document.querySelector("#emailInput").value;
-  newsletterMessage.textContent = `You're on the Korea drop list, ${email}.`;
+  newsletterMessage.textContent = "You are on the first Korea drop list. Prototype signup saved locally only.";
   newsletterForm.reset();
 });
 
